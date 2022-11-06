@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>山診断</title>
+    <meta name="description" content=“あなたも山を好きになる山”>
+    <meta property="og:title" content="山診断">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="#" />
+    <meta property="og:site_name" content="チーズアカデミー" />
+    <meta property="og:description" content="あなたも好きになる山" />
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="#">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/test.css" />
+    <link rel="icon" href="img/mountain-icon.png">
+    <!-- あらかじめcssを読み込んでいるので設定しなくてOK-->
+</head>
+<style>
+    .overflow-wrap-break {
+        overflow-wrap: break-word;
+    }
+</style>
+
+<body>
+    <!-- ここから記述しよう -->
+    <script>
+
+    </script>
+
+    <div class="choose_box">
+        <!-- 質問一覧 -->
+        <div class="app-theme">
+
+            <p>あなたが好きな山を探す(全5問)</p>
+        </div>
+        <!-- 質問1 -->
+        <div id="q_01" class="fit">
+            <p>質問1: あなたは普段</p>
+            <ul>
+                <li><a class="btn" href="#q_02" data-value="a">わりとゆとりのある</a></li>
+                <li><a class="btn" href="#q_02" data-value="b">忙しい</a></li>
+                <li><a class="btn" href="#q_02" data-value="c">超絶に忙しい</a></li>
+            </ul>
+        </div>
+
+        <!-- 質問2 -->
+        <div id="q_02" style="display: none;">
+            <p>質問2:　あなたは普段よく使う移動手段</p>
+            <ul>
+                <li><a class="btn" href="#q_03" data-value="a">歩き・自転車</a></li>
+                <li><a class="btn" href="#q_03" data-value="b">電車</a></li>
+                <li><a class="btn" href="#q_03" data-value="c">車</a></li>
+            </ul>
+        </div>
+
+        <!-- 質問3 -->
+        <div id="q_03" style="display: none;">
+            <p>質問3:　あなたが好きな週末の過ごし方</p>
+            <ul>
+                <li><a class="btn" href="#q_04" data-value="a">家やカフェでのんびり</a></li>
+                <li><a class="btn" href="#q_04" data-value="b">美術館や神社巡り</a></li>
+                <li><a class="btn" href="#q_04" data-value="c">友達とワイワイ楽しく過ごす</a></li>
+            </ul>
+        </div>
+
+        <!-- 質問4 -->
+        <div id="q_04" style="display: none;">
+            <p>質問4:　あなたはよく使う情報源は</p>
+            <ul>
+                <li><a class="btn" href="#q_05" data-value="a">ネット、SNSなど</a></li>
+                <li><a class="btn" href="#q_05" data-value="b">テレビ</a></li>
+                <li><a class="btn" href="#q_05" data-value="c">雑誌、新聞紙</a></li>
+            </ul>
+        </div>
+
+        <!-- 質問5 -->
+        <div id="q_05" style="display: none;">
+            <p>質問5:　あなたが好きな食べ物は</p>
+            <ul>
+                <li><a class="btn end" data-value="a">スイーツ</a></li>
+                <li><a class="btn end" data-value="c">肉</a></li>
+                <li><a class="btn end" data-value="b">特にこだわりなし</a></li>
+            </ul>
+        </div>
+
+
+
+        <!-- ここから以下回答 -->
+        <!-- 回答の答え1 -->
+        <div id="answer_01" class="result" style="display: none;">
+            <div class="result_theme ">
+                <p>あなたにあった山は</p>
+            </div>
+            <div class="result-type1">
+                <img class="icon" src="img/tateichi-icon.jpeg">
+                <h4 class="result-title">いつでも楽しく登れる：立石山(福岡・糸島市)</h4>
+            </div>
+
+            <h2>スイーツ × 楽しい山</h2>
+            <div class="result_discription">
+                <p class="result_text">
+                    普段忙しい生活の中、息詰まるところもあるでしょう。
+
+                    そんなあなたに、
+
+                    気軽に登れて、夕陽を眺めつつ、
+                    糸島で楽しく遊んでいたことを思い出しながら、
+                    夕陽を見ることはステキじゃないですか？
+
+                    立石山の登山口は芥屋第一駐車場から徒歩5分。
+                    登山コース自体の難易度は低く、
+                    約40分で山頂へ着きます。
+
+                    毎年ご来光見にこられる方もいらっしゃいますので、
+                    ぜひ、トトロの森を眺めて、海の景色を堪能して、
+                    日常の疲れを癒してください！
+                </p>
+
+                <img class="result-1" src="img/sunset-mountain.jpeg">
+            </div>
+            <secton>
+                <div class="botton">
+                    <a class="arrow_animation_button" href="result1.html">詳しくはこちら</a>
+                </div>
+            </secton>
+        </div>
+
+
+
+        <!-- 回答の答え2 -->
+        <div id="answer_02" style="display: none;">
+            <div class="result_theme ">
+                <p>あなたにあった山は</p>
+            </div>
+            <div class="result_type1 ">
+                <img class="icon" src="img/homan-icon.jpeg">
+                <h4>鬼滅の刃の原点：宝満山(福岡・太宰府)</h4>
+            </div>
+            <h2>アニメ × アクティブな山</h2>
+            <div class="result_discription">
+                <p class="result_text">
+
+                    あなたは忙しいのあまりに、運動不足になりがちかもしれないです。<br>
+                    きっと体を動かしたい日もあるでしょう。<br>
+
+                    そんなあなたに、<br>
+
+                    ほどいい運動になる、ちょっとだけ非日常も感じられる
+
+                </p>
+                <img class="result-1" src="img/yeah.jpeg">
+
+            </div>
+            <secton>
+                <div class="botton">
+                    <a class="arrow_animation_button" href="result2.html">詳しくはこちら</a>
+                </div>
+            </secton>
+
+        </div>
+
+        <!-- 回答の答え3 -->
+        <div id="answer_03" style="display: none;">
+            <div class="result_theme ">
+                <p>あなたにあった山は</p>
+            </div>
+            <div class="result_type1 ">
+                <img class="icon" src="img/kuju-icon.jpeg">
+                <h4>アクティブな人向けのくじゅう連山</h4>
+            </div>
+
+            <h2>温泉 × 肉 × のんびりな山</h2>
+            <div class="result_discription">
+                <p class="result_text">
+                <p></p>
+                　あなたは日頃ものすごく忙しいし、ストレスの多い日常を過ごしているでしょう。<br>
+
+                そんなあなたに、のんびりとハイキングしてから温泉にあか牛を食べる<br>
+
+                ちょっと贅沢なコースで日常なストレスも解放されるでしょう。<br>
+                </p>
+                <img class="result-1" src="img/mountain-illu.jpeg">
+            </div>
+            <secton>
+                <div class="botton">
+                    <a class="arrow_animation_button" href="result3.html">詳しくはこちら</a>
+                </div>
+            </secton>
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+
+    <footer>
+        <div class="footer-text">
+            <small>Copyright 2022. Mountain Cheese All Right Reserved.</small>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+	font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+	line-height: 1.75;
+	font-size: 16px;
+	max-width: 1000px;
+	margin: auto;
+	text-align: center;
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg, #03f2ff6b, #fc2e003b, #fbff015a);
+	/*グラデーションを定義*/
+	background-size: 200% 200%;
+	/*サイズを大きくひきのばす*/
+	animation: bggradient 20s ease infinite;
+}
+
+@keyframes bggradient {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+/* p { 
+	cursor: crosshair;
+	width: 400px;
+	background-color: #ffdff9;
+}*/
+
+
+.main-photo {
+	width: 1000px;
+	height: 400px;
+	object-fit: cover;
+}
+
+.site-title {
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	text-shadow: 1px 1px 2px black;
+	color: white;
+	background: url(../img/long-kuju-snow.jpeg);
+	background-size: 100%;
+	background-position: 0%;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	line-height: 0.5;
+	margin-bottom: 50px;
+}
+
+.photobackground {
+	background: rgba(255, 255, 255, 0.408);
+	width: 1000px;
+	height: 400px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/* レベル別 */
+
+.content-photo {
+	width: 1000px;
+	height: 300px;
+	object-fit: cover;
+}
+
+/* about */
+h2 {
+	margin-top: 50px;
+	margin-bottom: 50px;
+	font-weight: bolder;
+	font-family: inherit;
+}
+
+.font-text-box {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+
+.fontpage-text-rotate {
+	font-size: 70px;
+	font-weight: bold;
+	rotate: 30;
+	color: #fff;
+	text-shadow: rgb(9, 9, 9) 0.4px 0 10px;
+	transform: rotate(-10deg);
+
+}
+
+.fontpage-text {
+	font-size: 70px;
+	font-weight: bold;
+	rotate: 30;
+	color: #fff;
+	text-shadow: rgb(9, 9, 9) 0.4px 0 10px;
+	transform: rotate(10deg);
+}
+
+.like-yama {
+	font-size: 75px;
+	font-weight: bolder;
+	color: #fff;
+	text-shadow: rgb(234, 216, 56) 0.7px 0 10px;
+	font-feature-settings: "palt";
+}
+
+.catch-copy {
+	background: #00aab352;
+	height: 50px;
+	width: 1000px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* botton */
+.botton {
+	margin-top: 80px;
+	margin-bottom: 80px;
+	display: block;
+}
+
+/* 動くボタン */
+
+.arrow_animation_button {
+	display: inline-block;
+	position: relative;
+	padding: 10px 50px 10px 50px;
+	/* 左右に矢印を置くためのスペースを空ける */
+	background: #00ABB3;
+	color: #fff;
+	border-radius: 10px;
+}
+
+.arrow_animation_button:hover {
+	/* マウスオーバー時のスタイル */
+	background-image: linear-gradient(45deg, #FFB200 50%, #00ABB3 100%);
+	transform: rotate(-5deg);
+}
+
+.arrow_animation_button::before {
+	/* 矢印の表示設定 */
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	left: 15px;
+	width: 13px;
+	height: 13px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(45deg);
+	animation: slideBlink 1s linear infinite;
+	/* アニメーションの初期設定 */
+}
+
+@keyframes slideBlink {
+
+	/* アニメーションの内容 */
+	from {
+		/* アニメーション開始時のスタイル */
+		opacity: 0;
+		left: 8px;
+	}
+
+	to {
+		/* アニメーション終了時のスタイル */
+		opacity: 1;
+		left: 25px;
+	}
+}
+
+.arrow_animation_button::after {
+	/* 右側の矢印の表示設定 */
+	content: "";
+	position: absolute;
+	margin: auto;
+	top: 0;
+	bottom: 0;
+	right: 15px;
+	width: 13px;
+	height: 13px;
+	border-top: 2px solid #fff;
+	border-right: 2px solid #fff;
+	transform: rotate(225deg);
+	animation: rightSlideBlink 1s linear infinite;
+}
+
+@keyframes rightSlideBlink {
+
+	/* 右側のアニメーションの内容 */
+	from {
+		opacity: 0;
+		right: 8px;
+	}
+
+	to {
+		opacity: 1;
+		right: 25px;
+	}
+}
+
+
+/* footer */
+.footer-text {
+	width: 100%;
+	text-align: center;
+	font-size: 18px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(21, 158, 165, 0.2);
+}
+
+
+/*トップへ戻るボタン*/
+.topBtn {
+	max-width: 1000px;
+}
+
+.topBtn img {
+	position: relative left 800;
+	display: flex;
+	justify-content: flex-end;
+
+	/*固定*/
+	bottom: 45px;
+	/*場所を右下に移動*/
+	right: 80px;
+	/*場所を右下に移動*/
+	display: block;
+	animation: 3s linear infinite rotation;
+}
+
+@keyframes rotation {
+	0% {
+		transform: rotate(0);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+/*どの部分のcssに対して
+命令をしているのかコメントを
+記載しよう！
+---------------------*/
+/* 基本設定 */
+
+
+/*
+---------------------*/
+
+
+/*
+---------------------*/
+
+
+/*
+---------------------*/

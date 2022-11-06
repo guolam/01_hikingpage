@@ -1,0 +1,353 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+    font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
+
+/* 上部*/
+
+.icon {
+    width: 100px;
+}
+
+.result-type1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.result-title {
+    width: 400px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.result-text {
+    line-height: 40px;
+    text-align: justify;
+    align-items: center;
+    justify-content: center;
+    display: inline-block
+}
+
+.head__title {
+    margin-bottom: 50px;
+    background: linear-gradient(70deg, #00aab3ab 20%, rgba(255, 192, 203, 0.672));
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/* メインの写真 */
+.content-photo {
+    width: 1000px;
+    height: 500px;
+    object-fit: cover;
+    margin: 50px 0 50px 0;
+}
+
+/* 地図 */
+.map {
+    object-fit: cover;
+    margin: 50px 0 50px 0;
+}
+
+/* 周辺情報 */
+h3 {
+    margin-bottom: 50px;
+}
+
+
+
+/* botton */
+.botton {
+    margin-top: 100px;
+    margin-bottom: 150px;
+    display: block;
+
+}
+
+/* アコーディオンエリア */
+.accordion-area {
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.accordion-area li {
+    margin: 10px 0;
+}
+
+.accordion-area section {
+    border: 1px solid #ccc;
+}
+
+/*アコーディオンタイトル*/
+.title {
+    position: relative;
+    /*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アコーディオンの中*/
+.table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 50px;
+}
+
+
+
+dt {
+    width: 150px;
+}
+
+dd {
+    width: 330px;
+    text-align: left;
+}
+
+/*アコーディオンで現れるエリア*/
+
+.box {
+    /*はじめは非表示*/
+    display: none;
+    background: #f3f3f3;
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+
+}
+
+/* .box-together {
+    display: flex;
+    background: #f3f3f3;
+    margin: 0 3% 3% 3%;
+    padding: 3%;
+} */
+
+.left-box {
+    text-align: justify;
+    vertical-align: middle;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.left-box2 {
+    width: 300px;
+    vertical-align: middle;
+    margin-top: 5%;
+    margin-right: 5%;
+}
+
+.right-box {
+    width: 300px;
+    text-align: justify;
+    vertical-align: middle;
+
+}
+
+.right-box2 {
+    text-align: justify;
+    vertical-align: middle;
+    margin-top: 5%;
+}
+
+
+
+/*アイコンの＋と×*/
+.title::before,
+.title::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 2px;
+    background-color: #333;
+
+}
+
+.title::before {
+    top: 48%;
+    left: 15px;
+    transform: rotate(0deg);
+
+}
+
+.title::after {
+    top: 48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+.title.close::before {
+    transform: rotate(45deg);
+}
+
+.title.close::after {
+    transform: rotate(-45deg);
+}
+
+
+/*========= レイアウトのためのCSS ===============*/
+
+
+h2 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1rem;
+}
+
+/* 動くボタン */
+.arrow_animation_button {
+    display: inline-block;
+    position: relative;
+    padding: 10px 50px 10px 50px;
+    /* 左右に矢印を置くためのスペースを空ける */
+    background: #00ABB3;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.arrow_animation_button:hover {
+    /* マウスオーバー時のスタイル */
+    background-image: linear-gradient(45deg, #FFB200 50%, #00ABB3 100%);
+    transform: rotate(-5deg);
+}
+
+.arrow_animation_button::before {
+    /* 矢印の表示設定 */
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    animation: slideBlink 1s linear infinite;
+    /* アニメーションの初期設定 */
+}
+
+@keyframes slideBlink {
+
+    /* アニメーションの内容 */
+    from {
+        /* アニメーション開始時のスタイル */
+        opacity: 0;
+        left: 8px;
+    }
+
+    to {
+        /* アニメーション終了時のスタイル */
+        opacity: 1;
+        left: 25px;
+    }
+}
+
+.arrow_animation_button::after {
+    /* 右側の矢印の表示設定 */
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(225deg);
+    animation: rightSlideBlink 1s linear infinite;
+}
+
+@keyframes rightSlideBlink {
+
+    /* 右側のアニメーションの内容 */
+    from {
+        opacity: 0;
+        right: 8px;
+    }
+
+    to {
+        opacity: 1;
+        right: 25px;
+    }
+}
+
+/* CTA */
+.cta {
+    margin-top: 10%;
+}
+
+/* footer */
+.footer-text {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 158, 165, 0.2);
+}
+
+/*トップへ戻るボタン*/
+.topBtn img {
+    max-width: 1000px;
+    position: relative right 800;
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    /*固定*/
+    bottom: 45px;
+    /*場所を右下に移動*/
+    right: 80px;
+    /*場所を右下に移動*/
+    display: block;
+    animation: 3s linear infinite rotation;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

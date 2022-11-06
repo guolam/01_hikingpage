@@ -1,0 +1,260 @@
+/*全体　共通
+最初から設定してあるので特に変更
+しなくても大丈夫です♪
+-----------------*/
+body {
+    font-family: Roboto, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+    line-height: 1.75;
+    font-size: 16px;
+    max-width: 1000px;
+    margin: auto;
+    /* text-align: center; */
+}
+
+
+/*　パディングをサイズ内側にする処理　*/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* 基本設定 */
+.text-center {
+    /*文字が真ん中揃え*/
+    text-align: center;
+}
+
+/* contact */
+
+.course__title {
+    margin-bottom: 50px;
+    background: linear-gradient(70deg, #00aab3ab 20%, rgba(255, 192, 203, 0.672));
+    height: 150px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.contact_content {
+    margin-bottom: 50px;
+    line-height: 40px;
+
+}
+
+
+
+/* form */
+.form-wrapper {
+    width: 500px;
+    margin: auto;
+    margin-right: 300px;
+}
+
+.form-inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-title {
+    width: 120px;
+    font-weight: bold;
+    margin-top: 5%;
+}
+
+.form-item {
+    width: 380px;
+    margin-top: 5%;
+}
+
+.form-box-big input {
+    accent-color: #00ABB3;
+}
+
+.form-box {
+    width: 120px;
+    text-align: left;
+}
+
+.select {
+    direction: initial;
+    box-sizing: border-box;
+    text-align: justify;
+
+}
+
+.m-form-submit-button {
+    display: inline-block;
+    width: 380px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #020202;
+    font-weight: bold;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    border: 2px solid #292929;
+}
+
+.m-form-submit-button:hover {
+    background-color: #00aab34c;
+}
+
+.m-form-submit-button:focus {
+    outline: 0;
+    background-color: #00aab34c;
+    border: 2px solid #00aab34c;
+}
+
+/* botton */
+.botton {
+    margin-top: 100px;
+    margin-bottom: 80px;
+    display: block;
+    text-align: center;
+}
+
+
+
+/*
+input[type=checkbox].yellow-radio,
+input[type=radio].yellow-radio {
+    border: 2px solid white;
+}
+
+input[type=checkbox].yellow-radio:checked,
+input[type=checkbox].yellow-radio: indeterminate,
+input[type=radio].yellow-radio :checked:before {
+    background: white;
+}*/
+
+
+/* 動くボタン */
+
+.arrow_animation_button {
+    display: inline-block;
+    position: relative;
+    padding: 10px 50px 10px 50px;
+    /* 左右に矢印を置くためのスペースを空ける */
+    background: #00ABB3;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.arrow_animation_button:hover {
+    /* マウスオーバー時のスタイル */
+    background-image: linear-gradient(45deg, #FFB200 50%, #00ABB3 100%);
+    transform: rotate(-5deg);
+}
+
+.arrow_animation_button::before {
+    /* 矢印の表示設定 */
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 15px;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(45deg);
+    animation: slideBlink 1s linear infinite;
+    /* アニメーションの初期設定 */
+}
+
+@keyframes slideBlink {
+
+    /* アニメーションの内容 */
+    from {
+        /* アニメーション開始時のスタイル */
+        opacity: 0;
+        left: 8px;
+    }
+
+    to {
+        /* アニメーション終了時のスタイル */
+        opacity: 1;
+        left: 25px;
+    }
+}
+
+.arrow_animation_button::after {
+    /* 右側の矢印の表示設定 */
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    width: 13px;
+    height: 13px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    transform: rotate(225deg);
+    animation: rightSlideBlink 1s linear infinite;
+}
+
+@keyframes rightSlideBlink {
+
+    /* 右側のアニメーションの内容 */
+    from {
+        opacity: 0;
+        right: 8px;
+    }
+
+    to {
+        opacity: 1;
+        right: 25px;
+    }
+}
+
+/* home-botton 戻る*/
+.botton-home {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+/* footer */
+.footer-text {
+    margin-top: 80px;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(21, 158, 165, 0.2);
+}
+
+/* contact us */
+.instagramicon {
+    margin-top: 20px;
+    width: 60px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.sns {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+/*ーーーーーーーーーーー*/
+/*この下から記述*/
+/*ーーーーーーーーーーー*/
